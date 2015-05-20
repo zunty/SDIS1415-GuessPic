@@ -12,9 +12,14 @@ namespace GuessPic
 {
     public partial class GuessPic : Form
     {
+        Multicast.networking network;
         public GuessPic()
         {
             InitializeComponent();
+
+            network = new Multicast.networking("224.0.1.78",1305);
+            network.start_receiving();
+            
             fb_login.MouseEnter += new EventHandler(fb_MouseEnter);
             fb_login.MouseLeave += new EventHandler(fb_MouseLeave);
             tw_login.MouseEnter += new EventHandler(tw_MouseEnter);
@@ -84,10 +89,14 @@ namespace GuessPic
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            Room r = new Room();
+            Room r = new Room(network);
             r.Show();
             this.Hide();
         }
+
+       /* public void GuessPicSend(byte[] buff){
+             network.send(buff);
+        }*/
 
     }
 }

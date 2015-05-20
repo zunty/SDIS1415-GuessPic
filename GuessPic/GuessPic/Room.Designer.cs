@@ -65,49 +65,50 @@
             this.exit_button.TabStop = false;
             this.exit_button.Click += new System.EventHandler(this.exitButton_Click);
             // 
-            // listBox1
+            // chatBox
             // 
             this.chatBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(183)))), ((int)(((byte)(82)))));
             this.chatBox.FormattingEnabled = true;
             this.chatBox.Location = new System.Drawing.Point(41, 226);
-            this.chatBox.Name = "listBox1";
+            this.chatBox.Name = "chatBox";
             this.chatBox.Size = new System.Drawing.Size(324, 173);
             this.chatBox.TabIndex = 8;
             // 
-            // pictureBox1
+            // picGuess
             // 
             this.picGuess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(159)))), ((int)(((byte)(19)))));
             this.picGuess.Image = global::GuessPic.Properties.Resources.guesspic_sample;
             this.picGuess.Location = new System.Drawing.Point(0, 58);
-            this.picGuess.Name = "pictureBox1";
+            this.picGuess.Name = "picGuess";
             this.picGuess.Size = new System.Drawing.Size(400, 156);
             this.picGuess.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picGuess.TabIndex = 9;
             this.picGuess.TabStop = false;
             // 
-            // textBox1
+            // sendTextBox
             // 
             this.sendTextBox.Location = new System.Drawing.Point(41, 415);
-            this.sendTextBox.Name = "textBox1";
+            this.sendTextBox.Name = "sendTextBox";
             this.sendTextBox.Size = new System.Drawing.Size(216, 20);
             this.sendTextBox.TabIndex = 10;
             // 
-            // pictureBox2
+            // send_button
             // 
             this.send_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(159)))), ((int)(((byte)(19)))));
-            this.send_button.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.send_button.Image = ((System.Drawing.Image)(resources.GetObject("send_button.Image")));
             this.send_button.Location = new System.Drawing.Point(267, 417);
-            this.send_button.Name = "pictureBox2";
+            this.send_button.Name = "send_button";
             this.send_button.Size = new System.Drawing.Size(99, 18);
             this.send_button.TabIndex = 11;
             this.send_button.TabStop = false;
+            this.send_button.Click += new System.EventHandler(this.send_button_Click);
             // 
-            // pictureBox3
+            // guessPic_logo
             // 
             this.guessPic_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(159)))), ((int)(((byte)(19)))));
             this.guessPic_logo.Image = global::GuessPic.Properties.Resources.guesspic_logo_tiny;
             this.guessPic_logo.Location = new System.Drawing.Point(0, 16);
-            this.guessPic_logo.Name = "pictureBox3";
+            this.guessPic_logo.Name = "guessPic_logo";
             this.guessPic_logo.Size = new System.Drawing.Size(400, 32);
             this.guessPic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.guessPic_logo.TabIndex = 12;

@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GuessPic
 {
     public partial class Room : Form
     {
-        public Room()
+        Multicast.networking network;
+        public Room(Multicast.networking network)
         {
+            this.network = network;
             InitializeComponent();
             help_button.MouseEnter += new EventHandler(help_MouseEnter);
             help_button.MouseLeave += new EventHandler(help_MouseLeave);
@@ -61,9 +64,16 @@ namespace GuessPic
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            Room r = new Room();
+            Room r = new Room(network);
             r.Show();
             this.Hide();
+        }
+
+        private void send_button_Click(object sender, EventArgs e)
+        {
+            byte[] buff = Encoding.ASCII.GetBytes(sendTextBox.Text);
+            network.send(buff);
+            
         }
     }
 }
