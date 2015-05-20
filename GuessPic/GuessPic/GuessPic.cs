@@ -94,6 +94,22 @@ namespace GuessPic
             this.Hide();
         }
 
+        public void StartTimer()
+        {
+            System.Windows.Threading.DispatcherTimer myDispatcherTimer = new System.Windows.Threading.DispatcherTimer();
+            myDispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 50); // 50 Milliseconds 
+            myDispatcherTimer.Tick += new EventHandler(Each_Tick);
+            myDispatcherTimer.Start();
+        }
+
+
+        // Raised every 100 miliseconds while the DispatcherTimer is active.
+        public void Each_Tick(object o, EventArgs sender)
+        {
+            
+           // myTextBlock.Text = "Count up: " + i++.ToString();
+        }
+
        /* public void GuessPicSend(byte[] buff){
              network.send(buff);
         }*/

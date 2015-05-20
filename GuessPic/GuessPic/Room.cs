@@ -17,6 +17,7 @@ namespace GuessPic
         public Room(Multicast.networking network)
         {
             this.network = network;
+
             InitializeComponent();
             help_button.MouseEnter += new EventHandler(help_MouseEnter);
             help_button.MouseLeave += new EventHandler(help_MouseLeave);
@@ -24,6 +25,7 @@ namespace GuessPic
             exit_button.MouseLeave += new EventHandler(exit_MouseLeave);
             send_button.MouseEnter += new EventHandler(send_MouseEnter);
             send_button.MouseLeave += new EventHandler(send_MouseLeave);
+            
         }
 
         private void help_MouseLeave(object sender, EventArgs e)
@@ -34,6 +36,11 @@ namespace GuessPic
         private void help_MouseEnter(object sender, EventArgs e)
         {
             this.help_button.Image = ((System.Drawing.Image)(Properties.Resources.guesspic_help_h));
+        }
+
+        private void ChatBox_AddMessage(string msg)
+        {
+
         }
 
         private void exit_MouseLeave(object sender, EventArgs e)
